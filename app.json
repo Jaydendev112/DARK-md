@@ -1,9 +1,9 @@
 {
-  "name":"Toxic",
-  "description":"Whatsapp bot developed by xhclinton",
+  "name":"DARK",
+  "description":"Whatsapp bot developed by DARK",
   "keywords":["bot","node","baileys","whatsapp"],
-  "logo":"https://i.ibb.co/jyzsBZG/0b3f2531c2c10a93.jpg",
-  "repository":"https://github.com/xhclintohn/Toxic-MD",
+  "logo":"https://i.ibb.co/7PqQV1p/images-34.jpg",
+  "repository":"https://github.com/Jaydendev112/DARK-md",
   "succes_url":"/",
   "stack":"container",
   "env":{
@@ -35,7 +35,7 @@
     "BOT_NAME" : {
        
       "description":"put A name for your bot",
-      "value":"𝙏𝙤𝙭𝙞𝙘 𝙈𝘿",
+      "value":"𝗗𝗔𝗥𝗞 𝙈𝘿",
       "required":false
     } ,
      "AUTO_READ_MESSAGES" : {
@@ -48,7 +48,7 @@
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://i.ibb.co/jkJGQRZ/5103aef05fd0d76b.jpg",
+      "value":"https://i.ibb.co/7PqQV1p/images-34.jpg",
       "required":false
        
      },
@@ -80,14 +80,14 @@
     
     "desc": "Your Name",
     "required": false,
-    "value": "𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧"
+    "value": "DARK"
   },
     "NUMERO_OWNER":
   {
     
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
-    "value": "254735342808"
+    "value": "254107065646"
   },
     "WARN_COUNT":
   {
