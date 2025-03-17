@@ -1,4 +1,6 @@
-# DARK-md
+
+
+![An illustration showing a variety of differently themed Octocats. Monuments from different cities are indicated in the background like the Space Needle, Berlin Fernsehturm and Transamerica Pyramid.](https://i.ibb.co/7PqQV1p/images-34.jpg)
 
 # ғᴏʀᴋ ᴍʏ ʀᴇᴘᴏ
 </a></p>
