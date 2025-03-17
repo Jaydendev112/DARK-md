@@ -77,7 +77,7 @@ else {
         if(!superUser) { repondre("𝑫𝑨𝑹𝑲 𝐌𝐃 𝐢𝐬 𝐀𝐥𝐢𝐯𝐞") ; return};
 
       await   repondre("𝑰𝑵𝑭𝑶");
-         repondre("ALWAYS ALIVE 🚀")
+         repondre("𝑫𝑨𝑹𝑲 𝐌𝐃 𝐢𝐬 𝐀𝐥𝐢𝐯𝐞 🚀")
      }
  } else {
 
