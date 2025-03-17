@@ -24,3 +24,7 @@ _CREATE ACCOUNT_
 # DEPLOY ON REPLIT
 
 [![Run on Repl.it](https://repl.it/badge/github/Jaydendev112/DARK-md)](https://repl.it/github/Jaydendev112/DARK-md)
+
+# DEPLOY ON RAILWAY
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app)
