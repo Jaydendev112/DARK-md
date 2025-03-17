@@ -1,8 +1,13 @@
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines=+•★⃝ DARK MD★⃝•;MULTI-DEVICE+WHATSAPP+BOT;DEVELOPED+BY+DARK-TECH" alt="Typing SVG" /></a>
+
+
+
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/7PqQV1p/images-34.jpg" alt="IMG-20250227-WA0037" border="20"></a><br/></a>
 </p>
 
 
 # ғᴏʀᴋ ᴍʏ ʀᴇᴘᴏ
+
 </a></p>
 - <a href="https://github.com/Jaydendev112/DARK-md/fork"><img title="FORK THIS REPO" src="https://img.shields.io/badge/TAP TO FORK REPO-h?color=rgb(0, 255, 255)&style=for-the-badge&logo=porsche&logoColor=yellow" width="240" height="38.45"/></a></p>
 
