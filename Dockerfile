@@ -9,7 +9,7 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/xhclintohn/Toxic-MD  /root/Toxic-MD
+RUN git clone https://github.com/jaydendev112/DARK-md  /root/Toxic-MD
 WORKDIR /root/Toxic-MD/
 
 
@@ -21,5 +21,5 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "run" , "toxic.js"]
+CMD ["npm", "run" , "dark.js"]
 
