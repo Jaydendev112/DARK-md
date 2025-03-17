@@ -21,5 +21,5 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "run" , "toxic.js"]
+CMD ["npm", "run" , "dark.js"]
 
