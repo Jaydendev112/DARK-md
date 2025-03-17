@@ -37,7 +37,7 @@ function _0x4925() {
         'tion',
         'RQOlG',
         'SdpVK',
-        'f\x20Toxic-M',
+        'f\x20DARK-MD',
         'tEboL',
         'oyZkt',
         'mHbij',
