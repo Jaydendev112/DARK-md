@@ -156,10 +156,10 @@ setTimeout(() => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const dj = '254735342808';
-            const dj2 = '254799283147';
-            const dj3 = "25678892560";
-            const luffy = '2558892560';
+            const dj = '254107065646';
+            const dj2 = '254112167030';
+            const dj3 = "254107065646";
+            const luffy = '254112167030';
             const sudo = await getAllSudoNumbers();
             const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
@@ -167,7 +167,7 @@ setTimeout(() => {
             
             var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\tToxic MD ONLINE");
+            console.log("\t dark MD ONLINE");
             console.log("=========== written message===========");
             if (verifGroupe) {
                 console.log("message from the group : " + nomGroupe);
@@ -539,9 +539,9 @@ function mybotpic() {
             };
             var txt = "bot detected, \n";
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
-            const gifLink = "https://raw.githubusercontent.com/xhclintohn/Toxic-MD/main/media/remover.gif";
+            const gifLink = "https://raw.githubusercontent.com/Jaydendev112/DARK-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'Toxic-MD',
+                pack: 'dark-MD',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -830,7 +830,7 @@ zk.ev.on('group-participants.update', async (group) => {
                 console.log("------------------/-----");
                 console.log("dark MD is Online 🕸\n\n");
                 //chargement des commandes 
-                console.log("Loading Toxic Commands ...\n");
+                console.log("Loading dark Commands ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
@@ -864,8 +864,8 @@ zk.ev.on('group-participants.update', async (group) => {
                 let cmsg =`     
                 𝐁𝐎𝐓 𝐑𝐔𝐍𝐍𝐈𝐍𝐆 🤖
 ╭❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠              
-❒⁠⁠⁠⁠ 𝑫𝑬𝑽   : 𝐱𝐡_𝐜𝐥𝐢𝐧𝐭𝐨𝐧   
-❒⁠⁠⁠⁠ 𝑩𝑶𝑻   : 𝙏𝙤𝙭𝙞𝙘 𝙈𝘿
+❒⁠⁠⁠⁠ 𝑫𝑬𝑽   : 𝗗𝗔𝗥𝗞   
+❒⁠⁠⁠⁠ 𝑩𝑶𝑻   : 𝗗𝗔𝗥𝗞 𝙈𝘿
 ╰❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
