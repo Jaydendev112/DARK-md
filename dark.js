@@ -685,7 +685,7 @@ zk.ev.on('group-participants.update', async (group) => {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `*Toxic MD WELCOME MESSAGE*`;
+            let msg = `*DARK MD WELCOME MESSAGE*`;
             let membres = group.participants;
             for (let membre of membres) {
                 msg += ` \n❒ *Hey* 🖐️ @${membre.split("@")[0]} WELCOME TO OUR GROUP. \n\n`;
@@ -819,16 +819,16 @@ zk.ev.on('group-participants.update', async (group) => {
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Toxic MD is connecting...");
+                console.log("ℹ️ Dark MD is connecting...");
             }
             else if (connection === 'open') {
-                console.log("✅ Toxic MD Connected to WhatsApp! 🤖");
+                console.log("✅ Dark MD Connected to WhatsApp! 🤖");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("Toxic MD is Online 🕸\n\n");
+                console.log("dark MD is Online 🕸\n\n");
                 //chargement des commandes 
                 console.log("Loading Toxic Commands ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
