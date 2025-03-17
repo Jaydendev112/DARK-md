@@ -46,7 +46,7 @@ const date = moment().format('DD/MM/YYYY');
  ${message}
  
  
- *Toxic-MD-WABOT*`
+ *DARK-MD-WABOT*`
 
  if (lien.match(/\.(mp4|gif)$/i)) {
     try {
