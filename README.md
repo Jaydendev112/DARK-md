@@ -35,3 +35,7 @@ _CREATE ACCOUNT_
 # RAILWAY
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app)
+
+# RENDER
+
+<a href='https://dashboard.render.com' target="_blank"><img alt='DEPLOY' src='https://img.shields.io/badge/RENDER-h?color=maroon&style=for-the-badge&logo=render'/></a></p>
