@@ -38,7 +38,7 @@ _CREATE ACCOUNT_
 
 # RENDER
 
-4 align="center"> Render </h4>
+4 align="center" > Render </h4>
 <p style="text-align: center; font-size: 1.2em;">
     
 <p align="center">
