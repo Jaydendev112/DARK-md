@@ -5,76 +5,62 @@ const { format } = require(__dirname + "/../framework/mesfonctions");
 const os = require("os");
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
-
-zokou({ nomCom: "menu", reaction:"📁",categorie: "Général" }, async (dest, zk, commandeOptions) => {
+const more = String.fromCharCode(8206)
+const readmore = more.repeat(4001)
+zokou({ nomCom: "bugatti", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
     var mode = "public";
-    
-    if ((s.MODE).toLowerCase() != "oui") {
-        mode = "privé";
+    if ((s.MODE).toLocaleLowerCase() != "yes") {
+        mode = "private";
+
     }
-
-     
-
     cm.map(async (com, index) => {
         if (!coms[com.categorie])
             coms[com.categorie] = [];
         coms[com.categorie].push(com.nomCom);
     });
-
     moment.tz.setDefault('Etc/GMT');
-
 // Créer une date et une heure en GMT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
-
   let infoMsg =  `
-╭────✧${s.BOT}✧────◆
-│   *Préfixe* : ${s.PREFIXE}
-│   *Owner* : ${s.NOM_OWNER}
-│   *Mode* : ${mode}
-│   *Commandes* : ${cm.length}
-│   *Date* : ${date}
-│   *Heure* : ${temps}
-│   *Mémoire* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-│   *Plateforme* : ${os.platform()}
-│   *Developer* :  𝗗𝗔𝗥𝗞 🕸️
-╰─────✧WA-BOT✧─────◆ \n\n`;
-    
-let menuMsg = `
-👋 Hi ${nomAuteurMessage} 👋
-
-*𝗗𝗔𝗥𝗞 𝗺𝗱 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 :*
-◇                             ◇
+╭━━〔 *${s.BOT}* 〕━━┈⊷
+┃๏╭───────────
+┃๏│▸ 𝗢𝘄𝗻𝗲𝗿 : ${s.OWNER_NAME}
+┃๏│▸ 𝗣𝗿𝗲𝗳𝗶𝘅 : [ ${s.PREFIXE} ] 
+┃๏│▸ 𝗠𝗼𝗱𝗲 : *${mode}*
+┃๏│▸ 𝗥𝗮𝗺  : 𝟲𝟴/𝟭𝟯𝟮 𝗚𝗕
+┃๏│▸ 𝗗𝗮𝘁𝗲  : *${date}* 
+┃๏│▸ 𝗥𝗮𝗺 : 𝟲𝟴/𝟭𝟯𝟮 𝗚𝗕
+┃๏│▸ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : 𝗖𝗵𝗿𝗼𝗺𝗲 𝗟𝗶𝗻𝘂𝘅
+┃๏│▸ 𝗖𝗿𝗲𝗮𝘁𝗼𝗿 : 𝑫𝑨𝑹𝑲/𝑻𝑬𝑪𝑯
+┃๏└───────────···▸
+╰──────────────┈⊷\n${readmore}`;
+    let menuMsg = `𝑫𝑨𝑹𝑲-𝒎𝒅 𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺`;
 `;
-
     for (const cat in coms) {
-        menuMsg += `╭────❏ *${cat}* ❏`;
-        for (const cmd of coms[cat]) {
-            menuMsg += `
-│ ${cmd}`;
-        }
         menuMsg += `
-╰═════════════⊷ \n`
+╭──「 *${cat}* 」──┈⊷ 
+┃╭──────────
+┌┤ `;
+        for (const cmd of coms[cat]) {
+            menuMsg += `          
+┃│❝ ${cmd}`    
+        } 
+        menuMsg +=`
+┌┤
+│╰────────┈⊷  
+╰────────────┈⊷`
     }
-
     menuMsg += `
-◇            ◇
-*»»————— ★ —————««*
-The best whatsapp bot  ${prefixe}"created by 𝗗𝗔𝗥𝗞-𝗺𝗱🕸️"
- 
- powered by 𝗗𝗔𝗥𝗞 🕸️                                            
-*»»————— ★ —————««*
+> 𝑫𝑨𝑹𝑲 𝐌𝐃\n
 `;
-
-    
    var lien = mybotpic();
-
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Dark-md*, développé par Djalega++" , gifPlayback : true}, { quoted: ms });
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" , gifPlayback : true }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -84,7 +70,7 @@ The best whatsapp bot  ${prefixe}"created by 𝗗𝗔𝗥𝗞-𝗺𝗱🕸️"
 // Vérification pour .jpeg ou .png
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
-        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Dark-md*, développé par Djalega++" }, { quoted: ms });
+       zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -92,9 +78,6 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     }
 } 
 else {
-    
     repondre(infoMsg + menuMsg);
-    
 }
-
 });
