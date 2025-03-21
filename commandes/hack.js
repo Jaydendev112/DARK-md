@@ -1,5 +1,9 @@
-  nomCom: "hack",
-  aliases: ["malware", "trojan"],
+const {zokou} = require("../framework/zokou");
+const conf = require("../set")
+const {jidDecode}=require("@whiskeysockets/baileys")
+
+    nomCom: "hack",
+    aliases: ["malware", "trojan"],
   reaction: "🪅",
   categorie: "Fun"
 }, async (dest, zk, commandeOptions) => {
