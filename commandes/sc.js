@@ -48,7 +48,7 @@ DEV1 : DARK
 let menuMsg = `
      𝗗𝗔𝗥𝗞 𝗧𝗘𝗖𝗛
 
-</>`;
+𝑬𝑵𝑱𝑶𝒀🤭`;
 
    var lien = mybotpic();
 
