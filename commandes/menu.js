@@ -7,60 +7,69 @@ const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
 const readmore = more.repeat(4001)
+
 zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
     var mode = "public";
+    
     if ((s.MODE).toLocaleLowerCase() != "yes") {
         mode = "private";
-
     }
-    cm.map(async (com, index) => {
+
+
+    
+ cm.map(async (com, index) => {
         if (!coms[com.categorie])
             coms[com.categorie] = [];
         coms[com.categorie].push(com.nomCom);
     });
-    moment.tz.setDefault('Etc/GMT');
-// Créer une date et une heure en GMT
+
+    moment.tz.setDefault('EAT');
+
+// Créer une date et une heure en EAT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
+
   let infoMsg =  `
-╭━━〔 *${s.BOT}* 〕━━┈⊷
-┃๏╭───────────
-┃๏│▸ 𝗢𝘄𝗻𝗲𝗿 : ${s.OWNER_NAME}
-┃๏│▸ 𝗣𝗿𝗲𝗳𝗶𝘅 : [ ${s.PREFIXE} ] 
-┃๏│▸ 𝗠𝗼𝗱𝗲 : *${mode}*
-┃๏│▸ 𝗥𝗮𝗺  : 𝟲𝟴/𝟭𝟯𝟮 𝗚𝗕
-┃๏│▸ 𝗗𝗮𝘁𝗲  : *${date}* 
-┃๏│▸ 𝗥𝗮𝗺 : 𝟲𝟴/𝟭𝟯𝟮 𝗚𝗕
-┃๏│▸ 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : 𝗖𝗵𝗿𝗼𝗺𝗲 𝗟𝗶𝗻𝘂𝘅
-┃๏│▸ 𝗖𝗿𝗲𝗮𝘁𝗼𝗿 : 𝑫𝑨𝑹𝑲/𝑻𝑬𝑪𝑯
-┃๏└───────────···▸
-╰──────────────┈⊷\n${readmore}`;
-    let menuMsg = `𝑫𝑨𝑹𝑲-𝒎𝒅 𝑪𝑶𝑴𝑴𝑨𝑵𝑫𝑺`;
+╭──────────────────❂
+┊🕸️╭───*𝐃𝐀𝐑𝐊-𝐌𝐃*────❂
+┊🕸️┊ *𝐔𝐬𝐞𝐫* : ${s.OWNER_NAME}
+┊🕸️┊ *𝐌𝐨𝐝𝐞* : ${mode}
+┊🕸️╰───────────────❂
+┊🕸️┊ *𝐓𝐢𝐦𝐞* : ${temps}  
+┊🕸️┊ *𝐑𝐀𝐌* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+┊🕷️╰───────────────❂
+╰──────────────────❂ \n\n`;
+ 
+    let menuMsg=`  
+  *𝐃𝐀𝐑𝐊 𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒*
 `;
+
     for (const cat in coms) {
-        menuMsg += `
-╭──「 *${cat}* 」──┈⊷ 
-┃╭──────────
-┌┤ `;
+        menuMsg += `*╭────❂* *${cat}* *❂*`;
         for (const cmd of coms[cat]) {
-            menuMsg += `          
-┃│❝ ${cmd}`    
-        } 
-        menuMsg +=`
-┌┤
-│╰────────┈⊷  
-╰────────────┈⊷`
+            menuMsg += `  
+*┊🕸️* ${cmd}`;
+        }
+        menuMsg += `
+*╰═════════════❂* \n`
     }
+
     menuMsg += `
-> 𝑫𝑨𝑹𝑲 𝐌𝐃\n
+◇            ◇
+*—————🎁🎁🎁🎁—————*
+
+  *DARK/TECH*                                         
+*╰═════════════❂*
 `;
+
    var lien = mybotpic();
+
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" , gifPlayback : true }, { quoted: ms });
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" , gifPlayback : true }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -70,7 +79,7 @@ const date = moment().format('DD/MM/YYYY');
 // Vérification pour .jpeg ou .png
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
-       zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Beltahmd*, déveloper Beltah Tech" }, { quoted: ms });
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "*popkid*" }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -78,6 +87,9 @@ else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     }
 } 
 else {
+    
     repondre(infoMsg + menuMsg);
+    
 }
+
 });
