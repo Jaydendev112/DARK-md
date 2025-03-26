@@ -1,186 +1,105 @@
 {
-  "name": "CASEYRHODES-XMD",
-  "description": "Javascript WhatsApp bot made by CASEYRHODES.",
-  "keywords": ["popkid"],
-  
-  
-  "logo": "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg",
-  "repository": "https://github.com/caseyweb/NHEZHO-MD",
-  "succes_url": "/",
-
+  "name": "😇𝙋𝙤𝙥𝙠𝙞𝙙 𝙓𝙩𝙚𝙘𝙝😇",
+  "description": "Ok Popkid made it.",
+  "logo": "https://files.catbox.moe/w5xf3f.jpg",
+  "keywords": ["Popkid"],
+  "repository": "https://github.com/Popkiddevs/POPKID-XTECH",
   "stack": "container",
-  "env": {
-    "SESSION_ID": {
-      "description": "Put the session-id here.",
+  "env": { 
+      "SESSION_ID": {
+      "description": "your session id",
       "required": true,
       "value": ""
-    },  
-    
-    "ALIVE_IMG": {
-      "description": "paste your image url if you don't have you can use this public url.",
-      "required": false,
-      "value": "https://i.ibb.co/8gHCXCV9/IMG-20250216-WA0009.jpg"
-    }, 
-    
-    "LIVE_MSG": {
-      "description": "paste your alive message hear.",
-      "required": false,
-      "value": "> CASEYRHODES-XMD IS ACTIVE AND ALIVE⚡"
     },
-    
-    "PREFIX": {
-      "description": "paste your bot prefix note! Don't apply null prefix.",
-      "required": false,
-      "value": "."
-    },
-    
     "MODE": {
-      "description": "select your bot work type public-private-inbox-group.",
-      "required": false,
+      "description": "mode public or self",
+      "required": true,
       "value": "public"
-      
     },
-    
-    
-    "ALWAYS_ONLINE": {
-      "description": "Make it true if want always online.",
-      "required": false,
-      "value": "false"  
-    },    
-  
-    "AUTO_VOICE": {
-      "description": "Make it true if want automatic voice reply .",
-      "required": false,
-      "value": "false"
-    }, 
-
-    "AUTO_REPLY": {
-      "description": "Make it true if you want automatic reply.",
-      "required": false,
-      "value": "false"
-    }, 
-
-    "AUTO_STICKER": {
-      "description": "Make it true if you want automatic sticker.",
-      "required": false,
-      "value": "false"
-    }, 
-
-
-    "AUTO_STATUS_SEEN": {
-      "description": "Make it true for automatic status seen.",
+    "ANTI_DELETE": {
+      "description": "make it true for use anti delete",
       "required": true,
       "value": "true"
-    }, 
-
+    },
+  "AUTO_STATUS_SEEN": {
+      "description": "make it true if you want bot to view status",
+      "required": false,
+      "value": "true"
+    },
     "AUTO_STATUS_REPLY": {
-      "description": "Make it true for auto reply msg on status seen.",
-      "required": true,
+      "description": "make it true if you want to send message after seen status",
+      "required": false,
       "value": "false"
-    }, 
-
-    "AUTO_STATUS__MSG": {
-      "description": "Type custom message on status reply",
-      "required": true,
-      "value": "*🎉👀 sᴇᴇɴ ʙʏ ᴄᴀsᴇʏʀʜᴏᴅᴇs xᴍᴅ🚀🔥*"
-    }, 
-
+    },
+    "STATUS_READ_MSG": {
+      "description": "set your status reply message",
+      "required": false,
+      "value": "*status seen*"
+    },
     "OWNER_NAME": {
-      "description": "Type Bot Owner Name.",
+      "description": "set your status reply message",
       "required": false,
-      "value": "ᴄᴀsᴇʏʀʜᴏᴅᴇs 🫅"
-}, 
-
+      "value": "Marisel"
+    },
     "OWNER_NUMBER": {
-      "description": "put the owner number for bot.",
+      "description": "set your status reply message",
       "required": false,
-      "value": "254112192119"
- },
-
-    "BOT_NAME": {
-      "description": "Type here the bot name.",
-      "required": false,
-      "value": "✦ ᴄᴀsᴇʏʀʜᴏᴅᴇs xᴍᴅ✦"
-
-      }, 
-
-    "ANTI_LINK": {
-      "description": "Make it true if you want bot auto remove group link.",
-      "required": true,
-      "value": "true"
-      
+      "value": "254111385747"
     },
-    
-    "ANTI_BAD": {
-      "description": "Make it true if you want bot auto delete bad words.",
-      "required": false,
-      "value": "false"
-    }, 
-
-     "DESCRIPTION": {
-      "description": "add caption for menu and other",
-      "required": false,
-      "value": "*© ✦ᴄᴀsᴇʏʀʜᴏᴅᴇs xᴍᴅ✦*"
-    },
-
-      "DELETE_LINKS": {
-      "description": "remove links from group automatically without removing member",
-      "required": false,
-      "value": "true"
-    },
-    
-    "AUTO_RECORDING": {
-      "description": "Make it true if you want auto recoding.",
+    "AUTO_READ": {
+      "description": "make it true if you want bot to read message",
       "required": false,
       "value": "false"
     },
-
     "AUTO_TYPING": {
-      "description": "Make it true if you want auto typing.",
-      "required": false,
-      "value": "true"
-    },
-
-    "AUTO_REACT": {
-      "description": "Make it true if you want react on every message.",
+      "description": "make it true if you want bot to show typing",
       "required": false,
       "value": "false"
     },
-
-    "OWNER_REACT": {
-      "description": "Make it true if you only want react on Owner Massages.",
-      "required": false,
-      "value": "true"
-      
-    }, 
-    
-    "CUSTOM_REACT": {
-      "description": "Make it true if you want custom reactions.",
-      "required": false,
-      "value": "true"
-      
-    }, 
-    
-    "CUSTOM_REACT_EMOJIS": {
-      "description": "put here custom react react emojis.",
-      "required": false,
-      "value": "💝,💖,💗,❤️‍🔥,❤️‍🩹,❤️,🩷,🧡,💛,💚,💙,🩵,💜,🤎,🖤,🩶,🤍"
-    }, 
-
-
-    "READ_MESSAGE": {
-      "description": "Make it true if you want bot read your all sms just now.",
+    "AUTO_RECORDING": {
+      "description": "make it true if you want bot to show recording audio",
       "required": false,
       "value": "false"
-    }
+    },
+"HEROKU_APP_NAME": {
+      "description": "insert your heroku APP NAME (OPTIONAL)",
+      "value" : "", 
+      "required": false
 
 },
-
-     "buildpacks": [
-        {
-            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
-        }
-     ],
-  "stack": "heroku-24"
+      "HEROKU_APY_KEY": {
+      "description": "insert your heroku api-key (OPTIONAL)",
+      "value" : "", 
+      "required": false
+    },
+    "ALWAYS_ONLINE": {
+      "description": "make it true if you want bot to show always online",
+      "required": false,
+      "value": "false"
+    },
+    "REJECT_CALL": {
+      "description": "make it true if you want to reject call",
+      "required": false,
+      "value": "false"
+    },
+    "PREFIX": {
+      "description": "Your Bot Prefix default (.)",
+      "required": false,
+      "value": "."
+    }
+    },
+    "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ]
 }
-  
