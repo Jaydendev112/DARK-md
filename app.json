@@ -1,13 +1,13 @@
 {
-  "name": "⭕ JAVIEL ⭕",
-  "description": "This BOT was developed by Javiel Tech 👻.",
+  "name": "🧊𝙋𝙊𝙋𝙆𝙄𝘿-𝙓𝙏𝙀𝘾𝙃🧊",
+  "description": "This BOT was developed by Popkid Tech 🧊.",
   "keywords": [
     "bot",
     "node",
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://i.ibb.co/9kQGvLgb/IMG-20250227-WA0037.jpg",
+  "logo": "https://i.ibb.co/n6rw805/694affc7ca5a5fb0cb58c2b4533f962d.jpg",
   "repository": "https://github.com/Popkiddevs/POPKID-XTECH",
   "succes_url": "/",
   "stack": "container",
@@ -84,7 +84,7 @@
     },
     "BOT_NAME": {
       "description": "put A name for your bot",
-      "value": "JAVIEL-MD",
+      "value": "POPKID-MD",
       "required": false
   
     },
@@ -111,7 +111,7 @@
     "OWNER_NAME": {
       "desc": "Your Name",
       "required": false,
-      "value": "JAVIEL"
+      "value": "𝐏𝐨𝐩𝐤𝐢𝐝 𝐤𝐞"
     },
     "NUMERO_OWNER": {
       "desc": "Your number , dont put '+' and put you area code(exemple '254')",
