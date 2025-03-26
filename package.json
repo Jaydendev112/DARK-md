@@ -1,8 +1,8 @@
 
 {
-  "name": "Dark/tech"
+  "name": "Dark md"
   "version": "10.8.1",
-  "description": "ok DARK/TECH made it",
+  "description": "ok dark made it",
   "main": "index.js",
   "type": "module",
   "scripts": {
