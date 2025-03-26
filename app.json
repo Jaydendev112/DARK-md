@@ -1,94 +1,158 @@
 {
-  "name": "🕸️ DARK 🕷️",
-  "description": "Ok DARK made it.",
-  "logo": "https://i.ibb.co/fJCZprz/images-34.jpg",
-  "keywords": ["Popkid"],
-  "repository": "https://github.com/Jaydendev112/DARK-md",
+  "name": "⭕ JAVIEL ⭕",
+  "description": "This BOT was developed by Javiel Tech 👻.",
+  "keywords": [
+    "bot",
+    "node",
+    "baileys",
+    "whatsapp"
+  ],
+  "logo": "https://i.ibb.co/9kQGvLgb/IMG-20250227-WA0037.jpg",
+  "repository": "https://github.com/Popkiddevs/POPKID-XTECH",
+  "succes_url": "/",
   "stack": "container",
-  "env": { 
-      "SESSION_ID": {
-      "description": "your session id",
-      "required": true,
-      "value": ""
+  "env": {
+    "PREFIX": {
+      "description": "choose your prefix of bot",
+      "value": ".",
+      "required": true
     },
-    "MODE": {
-      "description": "mode public or self",
-      "required": true,
-      "value": "public"
+    "AUTO_READ_STATUS": {
+      "description": "Your contact status will be read automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "value": "yes",
+      "required": false
     },
-    "ANTI_DELETE": {
-      "description": "make it true for use anti delete",
-      "required": true,
-      "value": "true"
+    "AUTO_REPLY": {
+      "description": "Your contact messages will be replied automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "value": "no",
+      "required": false
+          },
+    "ANTIVV": {
+      "description": "Detect all view once media and send them to your dm",
+      "value": "yes",
+      "required": false
     },
-  "AUTO_STATUS_SEEN": {
-      "description": "make it true if you want bot to view status",
-      "required": false,
-      "value": "true"
+    "AUTO_BIO": {
+      "description": "Set live time bio.",
+      "value": "yes",
+      "required": false
     },
-    "AUTO_STATUS_REPLY": {
-      "description": "make it true if you want to send message after seen status",
-      "required": false,
-      "value": "false"
+    "AUTO_SAVE_CONTACTS": {
+      "description": "Your contacts will be saved automatically. ",
+      "value": "yes",
+      "required": false
     },
-    "STATUS_READ_MSG": {
-      "description": "set your status reply message",
-      "required": false,
-      "value": "*status seen*"
+    "ANTIDELETEDM": {
+      "description": "deleted messages will be detected lively.and sent directly after deletion",
+      "value": "yes",
+      "required": false
+    },
+    "AUTO_DOWNLOAD_STATUS": {
+      "description": "Your contact status will be download automatically and send to you(type yes to active or no to deactive ; don't write in capital letter)",
+      "value": "no",
+      "required": false
+    },
+    "AUTOREAD_MESSAGE": {
+      "description": "Show bluetick after message is received.(type yes to active or no to deactive  ; don't write in capital letter)",
+      "value": "no",
+      "required": false
+    },
+    "ANTILINK" : {
+      "description" : "detect links and remove link senders to group", 
+      "value" : "yes", 
+      "required" : false
+     }, 
+    "ANTICALL": {
+      "description": "no calls on WhatsApp...reject automatically(type yes to active or no to deactive  ; don't write in capital letter)",
+      "value": "no",
+      "required": false
+     }, 
+      "AUTO_REACT_STATUS": {
+      "description": "Your friend's status will be liked automatically",
+      "value": "yes",
+      "required": false
+    },
+    "CHAT_BOT" : {
+      "description" : "active bot to reply all messages received in pm", 
+      "value" : "no", 
+     "required" :false
+     }, 
+    "PM_PERMIT": {
+      "description": "Other user can't use your bot in pm (type yes to active or no to deactive ; don't write in capital letter)",
+      "value": "no",
+      "required": false
+    },
+    "BOT_NAME": {
+      "description": "put A name for your bot",
+      "value": "JAVIEL-MD",
+      "required": false
+  
+    },
+    "PUBLIC_MODE": {
+      "description": "type yes to put your bot on public mode or no to put it on private mod",
+      "value": "yes",
+      "required": false 
+    },
+    "HEROKU_APY_KEY": {
+      "description": "insert your heroku api-key (OPTIONAL)",
+      "value" : "", 
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "insert your heroku APP NAME (OPTIONAL)",
+      "value" : "", 
+      "required": false
+    },
+    "SESSION_ID": {
+      "description": "put your session ID , the code you receive after scanning Qr code",
+      "value": "",
+      "required": true
     },
     "OWNER_NAME": {
-      "description": "set your status reply message",
+      "desc": "Your Name",
       "required": false,
-      "value": "Marisel"
+      "value": "JAVIEL"
     },
-    "OWNER_NUMBER": {
-      "description": "set your status reply message",
+    "NUMERO_OWNER": {
+      "desc": "Your number , dont put '+' and put you area code(exemple '254')",
       "required": false,
-      "value": "254111385747"
+      "value": "254732297194"
     },
-    "AUTO_READ": {
-      "description": "make it true if you want bot to read message",
+    "WARN_COUNT": {
+      "desc": "this is the limit of warn for warning commandes",
       "required": false,
-      "value": "false"
+      "value": "3"
     },
-    "AUTO_TYPING": {
-      "description": "make it true if you want bot to show typing",
-      "required": false,
-      "value": "false"
+    "STARTING_BOT_MESSAGE": {
+      "description": "if you don't want startting-bot-message put no else put yes",
+      "required": true,
+      "value": "no"
     },
-    "AUTO_RECORDING": {
-      "description": "make it true if you want bot to show recording audio",
-      "required": false,
-      "value": "false"
+    "PRESENCE": {
+      "description": "Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
+      "value": "",
+      "required": false
     },
-    "ALWAYS_ONLINE": {
-      "description": "make it true if you want bot to show always online",
-      "required": false,
-      "value": "false"
+    "ADMGROUP": {
+      "description": "deleted messages will be detected on live chat",
+      "value": "yes",
+      "required": false
     },
-    "REJECT_CALL": {
-      "description": "make it true if you want to reject call",
+    "AUTO_REACTION": {
+      "description": "reaction with different emojis(IF YOU NEED THIS, SET POPKID_REACT TO no, ELSE IT WON'T WORK) ",
       "required": false,
-      "value": "false"
-    },
-    "PREFIX": {
-      "description": "Your Bot Prefix default (.)",
-      "required": false,
-      "value": "."
+      "value": "no"
     }
-    },
-    "buildpacks": [
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "standard-2x"
+    }
+  },
+  "addons": [
     {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git"
-    },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-    },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+      "plan": "heroku-postgresql:essential-0"
     }
   ]
 }
