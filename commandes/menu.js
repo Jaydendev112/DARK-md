@@ -24,7 +24,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     const temps = moment().format('HH:mm:ss');
     const date = moment().format('DD/MM/YYYY');
 
-    let infoMsg = `┏━━━🕷️ *𝙳𝙰𝚁𝙺-MD* 🕷️━━━┓
+    let infoMsg = `┏━━━☆ *𝙳𝙰𝚁𝙺-MD* ☆━━━┓
 ┃ 🔥  ʜᴇʟʟᴏ, *${nomAuteurMessage}*! 🔥
 ┣━━━━━━━━━━━━━━━━━━━━━
 ┃ 📌 *sʏsᴛᴇᴍ ɪɴғᴏ:*
@@ -45,7 +45,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     for (const cat in coms) {
         menuMsg += `┣ 🔹 *${cat.toUpperCase()}* 🔹\n`;
         for (const cmd of coms[cat]) {
-            menuMsg += `┃   🔸 ${cmd}\n`;
+            menuMsg += `┃       *➤* ${cmd}\n`;
         }
         menuMsg += `┣━━━━━━━━━━━━━━━━━━━━━\n`;
     }
