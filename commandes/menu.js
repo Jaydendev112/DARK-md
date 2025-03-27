@@ -43,12 +43,15 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     let menuMsg = ``;
 
     for (const cat in coms) {
-        menuMsg += `┣ 🔹 *${cat.toUpperCase()}* 🔹\n`;
+        menuMsg += `┣ 🔹 *${cat.toUpperCase()}* ☆\n`;
         for (const cmd of coms[cat]) {
             menuMsg += `┃       *➤* ${cmd}\n`;
         }
-        menuMsg += `┣━━━━━━━━━━━━━━━━━━━━━\n`;
+        menuMsg += `╭━━━◈${cat}◈━━━╮\n`;
     }
+            menuMsg += `
+*╰═════════════❂* \n`
+}
 
     menuMsg += `┗✨ *𝙳𝙰𝚁𝙺-ᴍᴅ - ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ 𝙳𝙰𝚁𝙺-𝚄𝙲𝙴𝚈 𝚃𝙴𝙲𝙷!* ✨`;
 
