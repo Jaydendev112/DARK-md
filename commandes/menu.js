@@ -24,7 +24,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     const temps = moment().format('HH:mm:ss');
     const date = moment().format('DD/MM/YYYY');
 
-    let infoMsg = `┏━━━☆ *𝙳𝙰𝚁𝙺-MD* ☆━━━┓
+    let infoMsg = `┏━━━⚡ *𝙳𝙰𝚁𝙺-𝙼𝙳* ⚡━━━┓
 ┃ 🔥  ʜᴇʟʟᴏ, *${nomAuteurMessage}*! 🔥
 ┣━━━━━━━━━━━━━━━━━━━━━
 ┃ 📌 *sʏsᴛᴇᴍ ɪɴғᴏ:*
@@ -43,17 +43,14 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     let menuMsg = ``;
 
     for (const cat in coms) {
-        menuMsg += `┣ 🔹 *${cat.toUpperCase()}* ☆\n`;
+        menuMsg += `┣ ☆ *${cat.toUpperCase()}* ☆ \n`;
         for (const cmd of coms[cat]) {
-            menuMsg += `┃       *➤* ${cmd}\n`;
+            menuMsg += `┃  *➤*  ${cmd}\n`;
         }
-        menuMsg += `╭━━━◈${cat}◈━━━╮\n`;
+        menuMsg += `┣━━━━━━━━━━━━━━━━━━━━━\n`;
     }
-            menuMsg += `
-*╰═════════════❂* \n`
-}
 
-    menuMsg += `┗✨ *𝙳𝙰𝚁𝙺-ᴍᴅ - ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ 𝙳𝙰𝚁𝙺-𝚄𝙲𝙴𝚈 𝚃𝙴𝙲𝙷!* ✨`;
+    menuMsg += `┗✨ *𝙳𝙰𝚁𝙺 -ᴍᴅ - ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ 𝙳𝙰𝚁𝙺-𝚄𝙲𝙴𝚈 𝚃𝙴𝙲𝙷!* ✨`;
 
     let imageUrl = "https://i.ibb.co/7PqQV1p/images-34.jpg";
 
@@ -61,7 +58,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
         zk.sendMessage(dest, { 
             image: { url: imageUrl }, 
             caption: infoMsg + menuMsg, 
-            footer: "© DARK-UCEY-TECH" 
+            footer: "© 𝙳𝙰𝚁𝙺-𝙼𝙳" 
         }, { quoted: ms });
     } catch (e) {
         console.log("🥵 Menu error: " + e);
