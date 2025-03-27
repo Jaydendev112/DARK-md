@@ -5,91 +5,63 @@ const { format } = require(__dirname + "/../framework/mesfonctions");
 const os = require("os");
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
-const more = String.fromCharCode(8206)
-const readmore = more.repeat(4001)
+
+const more = String.fromCharCode(8206);
+const readMore = more.repeat(4001);
 
 zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions) => {
-    let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
-    let { cm } = require(__dirname + "/../framework//zokou");
+    let { ms, repondre, prefixe, nomAuteurMessage } = commandeOptions;
+    let { cm } = require(__dirname + "/../framework/zokou");
     var coms = {};
-    var mode = "public";
-    
-    if ((s.MODE).toLocaleLowerCase() != "yes") {
-        mode = "private";
-    }
+    var mode = (s.MODE.toLowerCase() === "yes") ? "PUBLIC" : "PRIVATE";
 
-
-    
- cm.map(async (com, index) => {
-        if (!coms[com.categorie])
-            coms[com.categorie] = [];
+    cm.map((com) => {
+        if (!coms[com.categorie]) coms[com.categorie] = [];
         coms[com.categorie].push(com.nomCom);
     });
 
-    moment.tz.setDefault('EAT');
+    moment.tz.setDefault("Africa/Nairobi");
+    const temps = moment().format('HH:mm:ss');
+    const date = moment().format('DD/MM/YYYY');
 
-// Créer une date et une heure en EAT
-const temps = moment().format('HH:mm:ss');
-const date = moment().format('DD/MM/YYYY');
+    let infoMsg = `┏━━━🕷️ *𝙳𝙰𝚁𝙺-MD* 🕷️━━━┓
+┃ 🔥  ʜᴇʟʟᴏ, *${nomAuteurMessage}*! 🔥
+┣━━━━━━━━━━━━━━━━━━━━━
+┃ 📌 *sʏsᴛᴇᴍ ɪɴғᴏ:*
+┃ 💻 ᴘʟᴀᴛғᴏʀᴍ: *${os.platform()}*
+┣━━━━━━━━━━━━━━━━━━━━━
+┃ ⚙️ *ʙᴏᴛ sᴛᴀᴛᴜs:*
+┃ 🔘 ᴍᴏᴅᴇ: *${mode}*
+┃ 🚀 ᴘʀᴇғɪx: *[ ${prefixe} ]*
+┃ ⏳ ᴛɪᴍᴇ: *${temps}*
+┃ 📆 ᴅᴀᴛᴇ: *${date}*
+┣━━━━━━━━━━━━━━━━━━━━━
+┃ ${readMore}
+┃ 🎩 *ᴄᴏᴍᴍᴀɴᴅ ᴍᴇɴᴜ* 🎩
+┣━━━━━━━━━━━━━━━━━━━━━\n`;
 
-  let infoMsg =  `
-╭──────────────────❂
-┊☆╭───*𝐃𝐀𝐑𝐊-𝐌𝐃*────❂
-┊☆┊ *𝐔𝐬𝐞𝐫* : ${s.OWNER_NAME}
-┊☆┊ *𝐌𝐨𝐝𝐞* : ${mode}
-┊☆╰───────────────❂
-┊☆┊ *𝐓𝐢𝐦𝐞* : ${temps}  
-┊☆┊ *𝐑𝐀𝐌* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-┊☆╰───────────────❂
-╰──────────────────❂ \n\n`;
- 
-    let menuMsg=`  
-  *𝐃𝐀𝐑𝐊 𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒*
-`;
+    let menuMsg = ``;
 
     for (const cat in coms) {
-        menuMsg += `*╭────❂* *${cat}* *❂*`;
+        menuMsg += `┣ 🔹 *${cat.toUpperCase()}* 🔹\n`;
         for (const cmd of coms[cat]) {
-            menuMsg += `  
-*┊☆* ${cmd}`;
+            menuMsg += `┃   🔸 ${cmd}\n`;
         }
-        menuMsg += `
-*╰═════════════❂* \n`
+        menuMsg += `┣━━━━━━━━━━━━━━━━━━━━━\n`;
     }
 
-    menuMsg += `
-◇            ◇
-*—————☆☆☆☆—————*
+    menuMsg += `┗✨ *𝙳𝙰𝚁𝙺-ᴍᴅ - ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ 𝙳𝙰𝚁𝙺-𝚄𝙲𝙴𝚈 𝚃𝙴𝙲𝙷!* ✨`;
 
-  *DARK/TECH*                                         
-*╰═════════════❂*
-`;
+    let imageUrl = "https://i.ibb.co/7PqQV1p/images-34.jpg";
 
-   var lien = mybotpic();
-
-   if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" , gifPlayback : true }, { quoted: ms });
+        zk.sendMessage(dest, { 
+            image: { url: imageUrl }, 
+            caption: infoMsg + menuMsg, 
+            footer: "© DARK-UCEY-TECH" 
+        }, { quoted: ms });
+    } catch (e) {
+        console.log("🥵 Menu error: " + e);
+        repondre("🥵 Menu error: " + e);
     }
-    catch (e) {
-        console.log("🥵🥵 Menu erreur " + e);
-        repondre("🥵🥵 Menu erreur " + e);
-    }
-} 
-// Vérification pour .jpeg ou .png
-else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
-    try {
-        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "*popkid*" }, { quoted: ms });
-    }
-    catch (e) {
-        console.log("🥵🥵 Menu erreur " + e);
-        repondre("🥵🥵 Menu erreur " + e);
-    }
-} 
-else {
-    
-    repondre(infoMsg + menuMsg);
-    
-}
-
 });
