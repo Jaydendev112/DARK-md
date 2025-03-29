@@ -3,7 +3,6 @@ const fs = require('fs-extra');
 const { zokou } = require(__dirname + "/../framework/zokou");
 const { format } = require(__dirname + "/../framework/mesfonctions");
 const os = require("os");
-const conf = require(__dirname + "/../set");
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
 const more = String.fromCharCode(8206)
@@ -21,16 +20,15 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 
 
     
-
-    cm.map(async (com, index) => {
+ cm.map(async (com, index) => {
         if (!coms[com.categorie])
             coms[com.categorie] = [];
         coms[com.categorie].push(com.nomCom);
     });
 
-    moment.tz.setDefault ("Africa/nairobi");
+    moment.tz.setDefault('EAT');
 
-// Créer une date et une heure en GMT
+// Créer une date et une heure en EAT
 const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
@@ -50,49 +48,34 @@ const date = moment().format('DD/MM/YYYY');
 ╰━━━━━━━━━━━━━━━❍
 ☆𝗗𝗔𝗥𝗞-𝗨𝗖𝗘𝗬 𝗧𝗘𝗖𝗛 𝗕𝗢𝗧☆\n${readmore}`;
     
-    
-let menuMsg = `
-
- *𝗗𝗔𝗥𝗞 𝗠𝗗 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦*`;
+ 
+    let menuMsg=`  
+  *𝐃𝐀𝐑𝐊 𝐌𝐃 𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒*
+`;
 
     for (const cat in coms) {
-        menuMsg += `╭──────❍ *${cat}* ❍─────❍︎`;
+        menuMsg += `*╭────❂* *${cat}* *❂*`;
         for (const cmd of coms[cat]) {
-            menuMsg += `
-│➪│ ${cmd}`;
+            menuMsg += `  
+*┊☆* ${cmd}`;
         }
         menuMsg += `
-╰───────────❍\n`
+*╰═════════════❂* \n`
     }
 
-    menuMsg += `> 𝗗𝗔𝗥𝗞 𝗠𝗗 𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗗 𝗕𝗬 𝗧𝗛𝗘 𝗕𝗘𝗦𝗧 
+    menuMsg += `
+◇            ◇
+*—————☆☆☆☆—————*
+
+  *DARK/TECH*                                         
+*╰═════════════❂*
 `;
 
    var lien = mybotpic();
 
    if (lien.match(/\.(mp4|gif)$/i)) {
     try {
-        zk.sendMessage(dest, {
-      text: infoMsg + menuMsg,
-      contextInfo: {
-          forwardingScore: 999,
-            isForwarded: true,
-            forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363290715861418@newsletter',
-              newsletterName: '☆𝗗𝗔𝗥𝗞 𝗠𝗗☆',
-              serverMessageId: 143},
-        externalAdReply: {
-          title: "𝗗𝗔𝗥𝗞 𝗨𝗖𝗘𝗬 𝗣𝗥𝗢𝗝𝗘𝗖𝗧𝗦",
-          body: "Follow my channel for more updates",
-          thumbnailUrl: "https://i.ibb.co/5hwBmkb8/images-25.jpg",
-          sourceUrl: conf.GURL,
-          mediaType: 1,
-            renderLargerThumbnail: true,
-
-          showAdAttribution: false
-        }
-      }
-    }, { quoted: ms });
+        zk.sendMessage(dest, { video: { url: lien }, caption:infoMsg + menuMsg, footer: "Je suis *Zokou-MD*, développé par Djalega++" , gifPlayback : true }, { quoted: ms });
     }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
@@ -102,55 +85,16 @@ let menuMsg = `
 // Vérification pour .jpeg ou .png
 else if (lien.match(/\.(jpeg|png|jpg)$/i)) {
     try {
-        zk.sendMessage(dest, {
-      text: infoMsg + menuMsg,
-      contextInfo: {
-          forwardingScore: 999,
-            isForwarded: true,
-            forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363290715861418@newsletter',
-              newsletterName: '☆𝗗𝗔𝗥𝗞 𝗠𝗗☆',
-              serverMessageId: 143},
-        externalAdReply: {
-          title: "𝗗𝗔𝗥𝗞 𝗨𝗖𝗘𝗬 𝗣𝗥𝗢𝗝𝗘𝗖𝗧𝗦",
-          body: "https://whatsapp.com/channel/0029VarDt9t30LKL1SoYXy26",
-          thumbnailUrl: "https://i.ibb.co/5hwBmkb8/images-25.jpg",
-          sourceUrl: conf.GURL,
-          mediaType: 1,
-            renderLargerThumbnail: true,
-
-          showAdAttribution: false
-        }
-      }
-    }, { quoted: ms });
-      }
+        zk.sendMessage(dest, { image: { url: lien }, caption:infoMsg + menuMsg, footer: "*popkid*" }, { quoted: ms });
+    }
     catch (e) {
         console.log("🥵🥵 Menu erreur " + e);
         repondre("🥵🥵 Menu erreur " + e);
     }
 } 
 else {
-    zk.sendMessage(dest, {
-      text: infoMsg + menuMsg,
-      contextInfo: {
-          forwardingScore: 999,
-            isForwarded: true,
-            forwardedNewsletterMessageInfo: {
-              newsletterJid: '120363290715861418@newsletter',
-              newsletterName: '☆𝗗𝗔𝗥𝗞 𝗠𝗗☆',
-              serverMessageId: 143},
-        externalAdReply: {
-          title: "𝗗𝗔𝗥𝗞 𝗨𝗖𝗘𝗬 𝗣𝗥𝗢𝗝𝗘𝗖𝗧𝗦",
-          body: "https://whatsapp.com/channel/0029VarDt9t30LKL1SoYXy26",
-          thumbnailUrl: "https://i.ibb.co/5hwBmkb8/images-25.jpg",
-          sourceUrl: conf.GURL,
-          mediaType: 1,
-            renderLargerThumbnail: true
-
-
-        }
-      }
-    }, { quoted: ms });
+    
+    repondre(infoMsg + menuMsg);
     
 }
 
