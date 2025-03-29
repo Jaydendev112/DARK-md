@@ -38,7 +38,7 @@ const date = moment().format('DD/MM/YYYY');
      DARK MD
 
 > GITHUB LINK
-https://github.com/Jaydendev112/DARK-md/fork
+https://github.com/Jaydendev112/DARK-md
 
 > https://whatsapp.com/channel/0029VarDt9t30LKL1SoYXy26
 
