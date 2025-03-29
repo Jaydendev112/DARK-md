@@ -25,5 +25,18 @@ _CREATE ACCOUNT_
 </a></p>
 - <a href='https://signup.heroku.com/' target="_silver"><img alt='Heroku' src='https://img.shields.io/badge/-ℂℝ𝔼𝔸𝕋𝔼 𝔸ℂℂ𝕆𝕌ℕ𝕋 ℕ𝕆𝕎-rgb(224, 255, 255)?style=for-the-badge&logo=porsche&logoColor=pink' width="240" height="38.45"/></a>
 
-# ᴅᴇᴘʟᴏʏ ʙᴏᴛ
-- <a align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Jaydendev112/Dark-Finale"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-purple?style=for-the-badge&logo=porsche" width="220" height="38.45"/></a></p>
+# HEROKU 
+- <a align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/Jaydendev112/DARK-md"> <img src="https://img.shields.io/badge/DEPLOY%20NOW-purple?style=for-the-badge&logo=porsche" width="220" height="38.45"/></a></p>
+
+# REPLIT
+
+[![Run on Repl.it](https://repl.it/badge/github/Jaydendev112/DARK-md)](https://repl.it/github/Jaydendev112/DARK-md)
+
+# RAILWAY
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app)
+
+# RENDER
+    
+<p align="center">
+<a href='https://dashboard.render.com/web/new' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-Render deploy-black?style=for-the-badge&logo=render&logoColot=white'/< width=150 height=28/p></a>
